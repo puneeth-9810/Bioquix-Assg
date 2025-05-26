@@ -23,8 +23,8 @@ message queue)
 ### Clone Repository
 
 ```bash
-git clone https://github.com/your-username/resilient-api-proxy.git
-cd resilient-api-proxy
+https://github.com/puneeth-9810/Bioquix-Assg.git
+cd Bioquix-Assg
 ```
 
 ### Install Dependencies
