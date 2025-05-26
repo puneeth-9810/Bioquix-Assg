@@ -6,10 +6,10 @@ This project simulates a real-world scenario where a backend service interacts w
 multiple unreliable external APIs and must remain resilient under failures. 
 
 This project handles:
-● Resilient API handling (dockerized) (fallback logic, error classification, rate 
+-Resilient API handling (dockerized) (fallback logic, error classification, rate 
 limiting) 
-● Heartbeat monitoring (dockerized)  between containers 
-● Real-time communication between Docker containers (e.g., WebSocket or 
+-Heartbeat monitoring (dockerized)  between containers 
+-Real-time communication between Docker containers (e.g., WebSocket or 
 message queue)
 
 ## Setup
