@@ -49,24 +49,24 @@ This project contains two microservices API Proxy and Heartbeat communicating vi
 
 ### API Proxy
 
--Handles client requests to /data?title=....
--Fetches movie/show data from:
- OMDB API
- TVMaze API
--Uses Circuit Breaker (Opossum) to handle API failures and retry logic.
--Publishes real-time status messages to Redis on the status channel.
--Responds to /health endpoint for liveness checks.
+- Handles client requests to /data?title=....
+- Fetches movie/show data from:
+  - OMDB API
+  - TVMaze API
+- Uses Circuit Breaker (Opossum) to handle API failures and retry logic.
+- Publishes real-time status messages to Redis on the status channel.
+- Responds to /health endpoint for liveness checks.
 
 ### Heartbeat
 
--Pings P1’s /health every 5 seconds to monitor availability.
--If P1 is healthy, publishes "API Proxy is healthy" to Redis.
--If P1 is down, publishes an error message.
--Can also subscribe to the Redis status channel to log or process status messages from P1.
+- Pings P1’s /health every 5 seconds to monitor availability.
+- If P1 is healthy, publishes "API Proxy is healthy" to Redis.
+- If P1 is down, publishes an error message.
+- Can also subscribe to the Redis status channel to log or process status messages from P1.
 
 ### Redis
 
--Acts as a communication bridge between API Proxy and Heartbeat using Pub/Sub.
--Channel used: status*
+- Acts as a communication bridge between API Proxy and Heartbeat using Pub/Sub.
+- Channel used: status*
 
 ![Flow](images/flow.png)
